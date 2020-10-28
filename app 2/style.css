@@ -1,0 +1,288 @@
+/* CSS files add styling rules to your content */
+
+/* Le style de notre site internet: couleur de fond, polices, marges*/
+body {
+  background-color: #FFFFFF;
+  font-family: verdana, helvetica, arial, sans-serif;
+  width: 100%;
+}
+
+/* La couleur des titres les plus importants*/
+h1 {
+  font-style: normal;
+  color: #00A651;
+}
+/*création du menu déroulant*/
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white; /*couleur de fond du menu en entier*/
+    /*position: sticky; le menu reste toujours affiché*/
+    top: 0px; /*en haut de la page*/
+}
+/* caractéristiques de la liste à puce*/
+nav ul{
+    list-style-type: none;
+    float: right; /*affichage du menu à droite*/
+    width: 100%; /*taille reservé pour le menu déroulant sur la page*/
+}
+
+/* caractéristiques de la ligne de la liste*/
+nav li {
+    float:right; /*affichage du menu à droite et de gauche à droite*/
+}
+
+/* caractéristiques de la ligne et de la liste*/
+nav ul li{
+    float: left; /*affichage du menu de gauche à droite*/
+    width: 20%; /*répartition du groupe sur la page= 4 position (25%)*/
+    text-align: center; /*alignement du texte:centré*/
+    position: relative;/*permet au sous menu être même taille que le menu*/
+}
+
+/*éléments du menu avec lien */
+nav a{
+    display: block;
+    text-decoration: none; /*enlever la liste à puce*/
+    color: black; /* couleur du texte*/
+    border-bottom: 2px solid green; /*bordure du bas des catégories du menu*/
+    padding: 10px 0px;/*marge vers le bas*/
+}
+/*survol du menu déroulant*/
+nav a:hover{
+    color: green; /*couleur affichage au survol*/
+    /*border-bottom: 2px solid green;*/ /*bordure du bas des écatégories au survol*/
+}
+/*caractéristiques du sous-menu*/
+.sous{
+    display: none;/**/
+    box-shadow: 0px 1px 2px #CCC;/* ombre autour des sous-menu*/
+    background-color: white;/* couleur de fond du sous-menu*/
+    position: absolute;/* absolute: prend la position de l'élément précédent (menu)*/
+    width: 100%;/*prend toute la place dans le conteneur*/
+    /*z-index: 1000;/**/
+}
+nav > ul li:hover .sous{
+    display: block; /*affichage en bloc lors du survol*/
+}
+.sous li{
+    float: none;
+    width: 100%; /*prend toute la place dans le contneur*/
+    text-align: left; /*texte aligné à gauche*/
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+
+.article {
+  margin: 2em; /*Marge pour que le texte ne soit pas trop collé au côté gauche pour tous les articles*/
+}
+
+.categorie-accueil{
+  padding: 10px; /*Espace entre le contenu de l'élément et sa bordure*/
+  margin: 2em; /*Marge pour que le texte ne soit pas trop collé au côté gauche*/
+}
+
+/* La grande image d'accueil est alignée à droite */
+.image-accueil {
+  float: right;
+  margin : 100px;
+}
+
+/* Le deuxième bloc de texte de la page d'accueil (sous l'image) est justifié */
+#deuxieme-partie-texte-accueil {
+  text-align: justify;
+  background-color: #00A651;
+  color: white;
+  border-radius: 10px;
+  margin: 50px;
+  padding: 20px;
+  box-shadow: 10px 10px 5px 5px grey;
+}
+
+
+/* Les propriétés du texte qui sera utilisé dans ces boîtes*/
+.texte-boites {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+/* Les propriétés de la première ligne de boîtes de la page e-learning */
+.box{
+  background-color: rgb(0,166,81);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  border-radius:2px;
+  box-shadow: 10px 10px 5px 5px grey;
+}
+/*propriété du conteneur des box page elearning*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 60px; /*espace entre les colonnes*/
+  grid-row-gap: 90px; /*espaces entre les lignes*/
+  
+}
+
+/* Permet de justifier le texte */
+.definition {
+  text-align: justify;
+  text-justify: inter-word; /*texte justifié et espace entre les groupes de mots*/
+  padding: 15px;
+}
+  
+
+/* Affiche les paramètres de la vidéo et permet de la centrer sur l'écran */
+.video {
+  display: bloc;
+  width:50%;
+  margin-left:25%;
+}
+
+/*caractéristique du bouton*/
+#bouton {
+  background-color: white; /*#00A651*/ /*couleur du bouton*/
+  border-color: white; /*#00A651*/
+  width: 180px; /*grandeur du bouton*/
+  line-height:35px;/*hauteur du bouton*/
+  text-align:center; /*texte aligné dans le bouton*/
+  color:green;
+  border-radius:5px;
+  /*box-shadow: 1px 1px 1px #CCC;*/
+  margin: auto;
+  display: block;
+}
+
+#bouton:hover {
+  color: black; /*couleur écriture au survol*/
+  opacity : 65%; /*opacité du bouton*/
+  border-color: darkgreen; /*couleur de la bordure*/
+} 
+
+.texteEquipe {
+  text-align: center; /*Centrer les textes de l'équipe*/
+}
+
+.boxEquipe {
+  float: left;
+  margin-right: 100px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 400px;
+  height: 800px;
+  background-color: rgb(0,166,81);
+  padding: 1em;
+  box-shadow: 10px 10px 5px 5px grey;
+}
+
+.lien{
+  background-color: #00A651; /*couleur du bouton*/
+  border:none; /*pas de bordure*/
+  text-align:center; /*texte aligné dans le bouton*/
+  color:white; /*couleur écriture*/
+  padding: 10px 14px;
+  /*margin: 2px 4px;*/
+  font-size:14px;
+  text-decoration: none; /*enlever le souligné*/
+  border-radius:10px; /*angles arrondis*/
+  margin: auto;
+  display: block;
+  
+}
+
+.lien:hover{
+  color: white;
+  opacity : 65%;
+  border-color: darkgreen;
+}
+
+.grid-container2{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 60px;
+  grid-row-gap: 90px; /*espaces entre les lignes*/ 
+}
+
+.box2{
+  background-color: white;
+  /*border: 1px solid green;*/
+  /*padding: 20px;*/
+  font-size: 20px;
+  text-align: left;
+  /*box-shadow: 3px 3px 3px 3px lightgrey;*/
+}
+.texte-chiffre{
+  color:black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.texte-chiffre2{
+  color:black;
+  font-size: 13px;
+  text-align:justify;
+}
+
+.chiffre{
+  color:#00A651; /*couleur des chiffres*/
+  font-size: 40px; /*taille des chiffres*/
+  text-align:left; /*affichage à gauche*/
+  font-weight: bold; /*application de gras au texte*/
+}
+
+.listepicto{
+  text-decoration: none; /*enlever la liste à puce*/
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+table, td {
+  border: 15px solid white;
+}
+footer {
+	width: 100%;
+	margin-bottom: 0px;
+	height: 600px;
+	background-color: #1A1A1A;
+	display: block;
+  color: white;
+}
+
+/*.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
+}*/
+.contenu-footer{
+  padding: 20px;
+  font-size: 14px;
+  text-align: left;
+  border-radius:2px;
+}
+.ref{
+  color: white;
+}
+/*propriété du conteneur des box page elearning*/
+.grid-container3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px; /*espace entre les colonnes*/
+  grid-row-gap: 20px; /*espaces entre les lignes*/
+  
+}
+
+
